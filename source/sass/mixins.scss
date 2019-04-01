@@ -1,0 +1,39 @@
+@mixin container($width) {
+  width: $width;
+  margin: 0 auto;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-title {
+  margin: 0;
+  font-weight: 400;
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin text($font-size, $line-height, $color) {
+  font-family: $oswald;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  text-transform: uppercase;
+}
+
+@mixin title($font-size, $line-height) {
+  margin: 0;
+  font-family: $oswald;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 400;
+  color: $black;
+}
