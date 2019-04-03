@@ -1,5 +1,7 @@
-@mixin container($width) {
-  width: $width;
+@mixin container {
+  max-width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0 auto;
 }
 
