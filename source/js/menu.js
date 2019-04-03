@@ -29,7 +29,7 @@
       menuButton.style.backgroundImage = Close.URL;
       menuButton.style.backgroundPosition = Close.POSITION;
       menuButton.style.paddingRight = Close.PADDING;
-      if (window.innerWidth < TABLET_WIDTH) {
+      if (window.innerWidth < TABLET_WIDTH) {   // вся ширина окна
         menuButton.style.minWidth = Close.WIDTH;
       }
     } else {
@@ -37,7 +37,7 @@
       menuButton.style.backgroundImage = Menu.URL;
       menuButton.style.backgroundPosition = Menu.POSITION;
       menuButton.style.paddingRight = Menu.PADDING;
-      if (window.innerWidth < TABLET_WIDTH) {
+      if (window.innerWidth < TABLET_WIDTH) {  // вся ширина окна
         menuButton.style.minWidth = Menu.WIDTH;
       }
     }
