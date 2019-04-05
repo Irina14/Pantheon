@@ -1,0 +1,131 @@
+.video {
+  @include container;
+}
+
+.video__wrapper {
+  position: relative;
+  width: 214px;
+  height: 139px;
+  margin: 0 auto;
+}
+
+.video__link {
+  position: relative;
+  display: block;
+  width: 214px;
+  height: 139px;
+  margin: 0 auto;
+}
+
+.video__poster {
+  opacity: 0.7;
+  box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.48);
+}
+
+.video__button {
+  @include reset-button;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  transform: translate(-50%, -50%);
+
+  & span {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 52px;
+    height: 52px;
+    background-color: #e12457;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 7px);
+    left: 22px;
+    border: 12px solid #ffffff;
+    border-top-width: 7px;
+    border-bottom-width: 7px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-right-width: 0;
+  }
+}
+
+.video__text {
+  position: absolute;
+  top: 130px;
+  right: 10px;
+  width: 100px;
+  margin: 0;
+  line-height: 17px;
+  color: $pink;
+}
+
+.video--enabled {
+  cursor: pointer;
+}
+
+.video--enabled .video__button {
+  display: block;
+}
+
+@media (min-width: $tablet-width) {
+  .video__wrapper,
+  .video__link {
+    width: 516px;
+    height: 259px;
+  }
+
+  .video__button {
+    @include reset-button;
+    padding-left: 52px;
+    width: auto;
+
+    & span {
+      display: block;
+      margin-left: 10px;
+      font-size: 16px;
+      line-height: 16px;
+      font-weight: 600;
+      color: $white;
+    }
+  }
+
+  .video__text {
+    top: 224px;
+    right: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video__wrapper,
+  .video__link {
+    width: 582px;
+    height: 292px;
+  }
+
+  .video__text {
+    top: 110px;
+    right: -164px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 32px;
+      left: -150px;
+      width: 118px;
+      height: 1px;
+      background-color: $pink;
+    }
+  }
+}
