@@ -16,7 +16,7 @@
   videoLink.removeAttribute('href');
   video.classList.add('video--enabled');
 
-  function createIframe() {
+  var createIframe = function () {
     var iframe = document.createElement('iframe');
     iframe.setAttribute('width', '100%');
     iframe.setAttribute('height', '100%');
@@ -25,10 +25,10 @@
     iframe.setAttribute('allow', 'autoplay');
     iframe.setAttribute('allowfullscreen', '');
     return iframe;
-  }
+  };
 
-  function generateURL(url) {
-    var query = '?rel=0&showinfo=0&autoplay=1'; // видео сразу запускается
-    return url + query;
+  var generateURL = function (url) {
+    var QUERY = '?rel=0&showinfo=0&autoplay=1'; // видео сразу запускается
+    return url + QUERY;
   }
 })();
