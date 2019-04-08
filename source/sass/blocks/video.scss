@@ -7,6 +7,7 @@
   width: 214px;
   height: 139px;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .video__link {
@@ -79,7 +80,32 @@
   display: block;
 }
 
+.video__down {
+  position: relative;
+  display: block;
+  width: 59px;
+  height: 59px;
+  margin: 0 auto;
+  background-color: rgba(#b11d5e, 0.5);
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18px;
+    height: 17px;
+    background: url("../img/down-mobile.png") no-repeat;
+    transform: translate(-50%, -50%);
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .video__wrapper {
+    margin-bottom: 58px;
+  }
+
   .video__wrapper,
   .video__link {
     width: 516px;
@@ -105,9 +131,24 @@
     top: 224px;
     right: 30px;
   }
+
+  .video__down {
+    width: 75px;
+    height: 75px;
+
+    &::before {
+      width: 23px;
+      height: 22px;
+      background: url("../img/down-tablet.png") no-repeat;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .video__wrapper {
+    margin-bottom: 25px;
+  }
+
   .video__wrapper,
   .video__link {
     width: 582px;
@@ -127,5 +168,9 @@
       height: 1px;
       background-color: $pink;
     }
+  }
+
+  .video__down {
+    margin: 0;
   }
 }
