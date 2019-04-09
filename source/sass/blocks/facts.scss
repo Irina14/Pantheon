@@ -1,0 +1,68 @@
+.facts {
+  background-color: #fff5f8;
+}
+
+.facts__list {
+  @include reset-list;
+  @include container;
+  display: flex;
+  overflow-y: auto; //появляется горизонтальная прокрутка
+}
+
+.facts__item {
+  position: relative;
+  flex-shrink: 0;
+  padding: 38px 38px 32px;
+  width: 205px;
+
+  &:first-child {
+    padding-left: 0;
+    width: 165px;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    width: 165px;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 34px);
+    right: 0;
+    width: 1px;
+    height: 49px;
+    background-color: #fbd6e0;
+  }
+}
+
+.facts__number {
+  font-size: 36px;
+  font-weight: 700;
+  color: $maroon;
+}
+
+.facts__text {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .facts__item {
+    padding: 48px 38px 52px;
+  }
+
+  .facts__number {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .facts__list {
+    overflow-y: visible;
+  }
+
+  .facts__item {
+    padding: 50px 38px 50px;
+  }
+}
