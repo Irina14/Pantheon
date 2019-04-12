@@ -1,7 +1,9 @@
 .mars {
   padding-top: 44px;
-  padding-bottom: 185px;
-  background: url("../img/bg-mars-mobile.png") no-repeat center bottom;
+  padding-bottom: 253px;
+  background:
+    url("../img/bg-mars-tablet.png") no-repeat 70% bottom,
+    url("../img/pattern.png");
 }
 
 .mars__wrapper {
@@ -41,8 +43,9 @@
 @media (min-width: $tablet-width) {
   .mars {
     padding-top: 50px;
-    padding-bottom: 253px;
-    background: url("../img/bg-mars-tablet.png") no-repeat center bottom;
+    background:
+      url("../img/bg-mars-desktop.png") no-repeat 80% bottom,
+      url("../img/pattern.png");
   }
 
   .mars__title {
@@ -79,7 +82,9 @@
   .mars {
     padding-top: 80px;
     padding-bottom: 200px;
-    background: url("../img/bg-mars-desktop.png") no-repeat center bottom;
+    background:
+      url("../img/bg-mars-desktop.png") no-repeat center bottom,
+      url("../img/pattern.png");
   }
 
   .mars__title {
