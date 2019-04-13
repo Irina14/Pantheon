@@ -1,0 +1,116 @@
+.mars {
+  padding-top: 44px;
+  padding-bottom: 253px;
+  background:
+    url("../img/bg-mars-tablet.png") no-repeat 70% bottom,
+    url("../img/pattern.png");
+}
+
+.mars__wrapper {
+  @include container;
+}
+
+.mars__title {
+  @include title(36px, 40px, $maroon);
+  width: 280px;
+  margin-bottom: 30px;
+}
+
+.mars__subtitle {
+  @include title(24px, 24px, $dark);
+  width: 214px;
+  margin-bottom: 25px;
+}
+
+.mars__desc {
+  margin: 0;
+
+  &--name {
+    margin-bottom: 16px;
+  }
+
+  &--distance {
+    margin-bottom: 20px;
+  }
+}
+
+.mars__article {
+  &--one {
+    margin-bottom: 40px;
+  }
+
+  &--two {
+    width: 90%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .mars {
+    padding-top: 50px;
+    background:
+      url("../img/bg-mars-desktop.png") no-repeat 80% bottom,
+      url("../img/pattern.png");
+  }
+
+  .mars__title {
+    @include title(48px, 48px, $maroon);
+    width: auto;
+    margin-bottom: 35px;
+  }
+
+  .mars__subtitle {
+    width: auto;
+  }
+
+  .mars__desc {
+    &--distance {
+      margin-bottom: 0;
+    }
+  }
+
+  .mars__articles {
+    display: flex;
+  }
+
+  .mars__article {
+    &--one {
+      width: 48%;
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    &--two {
+      width: 46%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .mars {
+    padding-top: 80px;
+    padding-bottom: 200px;
+    background:
+      url("../img/bg-mars-desktop.png") no-repeat center bottom,
+      url("../img/pattern.png");
+  }
+
+  .mars__title {
+    @include title(60px, 60px, $maroon);
+    margin-bottom: 35px;
+  }
+
+  .mars__articles {
+    display: flex;
+  }
+
+  .mars__article {
+    &--one {
+      width: 473px;
+      margin-right: 52px;
+    }
+
+    &--two {
+      width: 390px;
+    }
+  }
+}

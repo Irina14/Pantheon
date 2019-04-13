@@ -11,9 +11,12 @@
   list-style: none;
 }
 
-@mixin reset-title {
+@mixin title ($font-size, $line-height, $color) {
   margin: 0;
-  font-weight: 400;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 700;
+  color: $color;
 }
 
 @mixin reset-button {
@@ -24,18 +27,7 @@
 }
 
 @mixin text($font-size, $line-height, $color) {
-  font-family: $oswald;
   font-size: $font-size;
   line-height: $line-height;
   color: $color;
-  text-transform: uppercase;
-}
-
-@mixin title($font-size, $line-height) {
-  margin: 0;
-  font-family: $oswald;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: 400;
-  color: $black;
 }
