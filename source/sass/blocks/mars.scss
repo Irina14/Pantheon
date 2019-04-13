@@ -38,6 +38,10 @@
   &--one {
     margin-bottom: 40px;
   }
+
+  &--two {
+    width: 90%;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -66,14 +70,17 @@
 
   .mars__articles {
     display: flex;
-    justify-content: space-between;
   }
 
   .mars__article {
-    width: 48%;
-
     &--one {
+      width: 48%;
       margin-bottom: 0;
+      margin-right: 30px;
+    }
+
+    &--two {
+      width: 46%;
     }
   }
 }
@@ -94,7 +101,6 @@
 
   .mars__articles {
     display: flex;
-    justify-content: flex-start;
   }
 
   .mars__article {

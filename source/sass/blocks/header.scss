@@ -72,6 +72,7 @@
     &::before {
       height: 950px;
       background: $purple url("../img/bg-desktop.jpg") no-repeat center;
+      background-size: cover;
     }
   }
 
