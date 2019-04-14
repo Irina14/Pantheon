@@ -1,13 +1,17 @@
 .mars {
-  padding-top: 44px;
-  padding-bottom: 253px;
-  background:
-    url("../img/bg-mars-tablet.png") no-repeat 70% bottom,
-    url("../img/pattern.png");
+  background: url("../img/pattern.png");
 }
 
 .mars__wrapper {
   @include container;
+  position: relative;
+}
+
+.mars__remember {
+  margin-bottom: 90px;
+  padding-top: 44px;
+  padding-bottom: 253px;
+  background: url("../img/bg-mars-tablet.png") no-repeat 70% bottom;
 }
 
 .mars__title {
@@ -44,18 +48,61 @@
   }
 }
 
+.mars__text {
+  margin: 0;
+  font-size: 16px;
+
+  &--one {
+    margin-bottom: 35px;
+  }
+
+  &--two {
+    margin-bottom: 15px;
+  }
+
+  &--three {
+    margin-bottom: 50px;
+  }
+}
+
+.mars__photo {
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.mars__quote {
+  position: relative;
+  margin: 0 0 40px;
+  padding-top: 20px;
+  font-size: 18px;
+  color: $maroon;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 16px;
+    height: 12px;
+    background: url("../img/commas.png") no-repeat;
+  }
+}
+
 @media (min-width: $tablet-width) {
-  .mars {
+  .mars__remember {
+    margin-bottom: 70px;
     padding-top: 50px;
-    background:
-      url("../img/bg-mars-desktop.png") no-repeat 80% bottom,
-      url("../img/pattern.png");
+    background: url("../img/bg-mars-desktop.png") no-repeat 80% bottom;
   }
 
   .mars__title {
     @include title(48px, 48px, $maroon);
     width: auto;
     margin-bottom: 35px;
+
+    & br {
+      display: none;
+    }
   }
 
   .mars__subtitle {
@@ -83,15 +130,39 @@
       width: 46%;
     }
   }
+
+  .mars__text {
+    &--one {
+      margin-bottom: 17px;
+      padding-right: 220px;
+    }
+  }
+
+  .mars__quote {
+    margin-bottom: 25px;
+    padding-right: 220px;
+  }
+
+  .mars__photo {
+    position: absolute;
+    top: 132px;
+    right: 15px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 915px) {
+  .mars__photo {
+    top: 85px;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .mars {
+  .mars__remember {
+    margin-bottom: 115px;
     padding-top: 80px;
     padding-bottom: 200px;
-    background:
-      url("../img/bg-mars-desktop.png") no-repeat center bottom,
-      url("../img/pattern.png");
+    background: url("../img/bg-mars-desktop.png") no-repeat center bottom;
   }
 
   .mars__title {
@@ -112,5 +183,18 @@
     &--two {
       width: 390px;
     }
+  }
+
+  .mars__text {
+    padding-right: 445px;
+  }
+
+  .mars__quote {
+    margin-bottom: 35px;
+    padding-right: 445px;
+  }
+
+  .mars__photo {
+    top: 90px;
   }
 }

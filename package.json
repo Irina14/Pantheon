@@ -1,8 +1,8 @@
 {
-  "name": "cat-energy",
+  "name": "pantheon",
   "version": "15.0.0",
   "private": true,
-  "description": "Личный проект «Кэт энерджи» от HTML Academy",
+  "description": "Первый город на планете Марс",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.1.x",
