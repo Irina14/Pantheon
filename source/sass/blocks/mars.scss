@@ -5,6 +5,13 @@
 .mars__wrapper {
   @include container;
   position: relative;
+
+  &--cost {
+    width: 290px;
+    padding-top: 180px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .mars__remember {
@@ -24,6 +31,10 @@
   @include title(24px, 24px, $dark);
   width: 214px;
   margin-bottom: 25px;
+
+  &--cost {
+    color: $white;
+  }
 }
 
 .mars__desc {
@@ -60,9 +71,18 @@
     margin-bottom: 15px;
   }
 
-  &--three {
-    margin-bottom: 50px;
+  &--cost {
+    margin-bottom: 30px;
+    color: $white;
+
+    & span {
+      font-weight: 700;
+    }
   }
+}
+
+.mars__idea {
+  margin-bottom: 194px;
 }
 
 .mars__photo {
@@ -86,6 +106,59 @@
     height: 12px;
     background: url("../img/commas.png") no-repeat;
   }
+}
+
+.mars__cost {
+  min-height: 650px;
+  background: url("../img/bg-missile-mobile.jpg") no-repeat center top;
+}
+
+.mars__missile {
+  position: absolute;
+  top: -145px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.mars__block {
+  color: $white;
+}
+
+.mars__price {
+  margin: 0 0 24px;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 100;
+}
+
+.mars__slogan {
+  position: relative;
+  margin: 0 0 40px;
+  padding-bottom: 10px;
+  font-size: 24px;
+  font-weight: 100;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 218px;
+    height: 1px;
+    background-color: $white;
+  }
+}
+
+.mars__button {
+  @include text(18px, 24px, #c2529a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 57px;
+  font-weight: 700;
+  background-color: $white;
+  border-radius: 28px;
 }
 
 @media (min-width: $tablet-width) {
@@ -131,6 +204,10 @@
     }
   }
 
+  .mars__idea {
+    margin-bottom: 95px;
+  }
+
   .mars__text {
     &--one {
       margin-bottom: 17px;
@@ -148,6 +225,10 @@
     top: 132px;
     right: 15px;
     margin-bottom: 0;
+  }
+
+  .mars__cost {
+    background: url("../img/bg-missile-tablet.jpg") no-repeat center top;
   }
 }
 
@@ -185,6 +266,10 @@
     }
   }
 
+  .mars__idea {
+    margin-bottom: 85px;
+  }
+
   .mars__text {
     padding-right: 445px;
   }
@@ -196,5 +281,9 @@
 
   .mars__photo {
     top: 90px;
+  }
+
+  .mars__cost {
+    background: url("../img/bg-missile-desktop.jpg") no-repeat center top;
   }
 }
