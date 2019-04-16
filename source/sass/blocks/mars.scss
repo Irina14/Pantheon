@@ -160,9 +160,19 @@
   background-color: $white;
   border-radius: 28px;
   box-shadow: 2px 2px 27px 0 #ffffff;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: #c2529a;
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .mars {
+    padding-bottom: 86px;
+  }
+
   .mars__wrapper {
     &--cost {
       width: 655px;
@@ -284,6 +294,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .mars {
+    padding-bottom: 165px;
+  }
+
   .mars__wrapper {
     &--cost {
       width: 1005px;
