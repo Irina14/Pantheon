@@ -159,9 +159,17 @@
   font-weight: 700;
   background-color: $white;
   border-radius: 28px;
+  box-shadow: 2px 2px 27px 0 #ffffff;
 }
 
 @media (min-width: $tablet-width) {
+  .mars__wrapper {
+    &--cost {
+      width: 655px;
+      padding-top: 45px;
+    }
+  }
+
   .mars__remember {
     margin-bottom: 70px;
     padding-top: 50px;
@@ -180,6 +188,10 @@
 
   .mars__subtitle {
     width: auto;
+
+    &--cost {
+      padding-left: 348px;
+    }
   }
 
   .mars__desc {
@@ -213,6 +225,11 @@
       margin-bottom: 17px;
       padding-right: 220px;
     }
+
+    &--cost {
+      margin-bottom: 50px;
+      padding-left: 348px;
+    }
   }
 
   .mars__quote {
@@ -228,7 +245,35 @@
   }
 
   .mars__cost {
+    min-height: 377px;
     background: url("../img/bg-missile-tablet.jpg") no-repeat center top;
+  }
+
+  .mars__missile {
+    top: -46px;
+    left: 15px;
+    transform: none;
+  }
+
+  .mars__block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .mars__price {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  .mars__slogan {
+    margin-bottom: 25px;
+  }
+
+  .mars__button {
+    margin-left: auto;
+    width: 200px;
+    height: 57px;
   }
 }
 
@@ -239,6 +284,14 @@
 }
 
 @media (min-width: $desktop-width) {
+  .mars__wrapper {
+    &--cost {
+      width: 1005px;
+      padding-top: 55px;
+      padding-left: 330px;
+    }
+  }
+
   .mars__remember {
     margin-bottom: 115px;
     padding-top: 80px;
@@ -266,12 +319,25 @@
     }
   }
 
+  .mars__subtitle {
+    &--cost {
+      padding-left: 0;
+    }
+  }
+
   .mars__idea {
     margin-bottom: 85px;
   }
 
   .mars__text {
     padding-right: 445px;
+
+    &--cost {
+      width: 650px;
+      margin-bottom: 18px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .mars__quote {
@@ -284,6 +350,16 @@
   }
 
   .mars__cost {
+    min-height: 308px;
     background: url("../img/bg-missile-desktop.jpg") no-repeat center top;
+  }
+
+  .mars__missile {
+    top: -29px;
+    left: -40px;
+  }
+
+  .mars__price {
+    margin-right: 40px;
   }
 }
