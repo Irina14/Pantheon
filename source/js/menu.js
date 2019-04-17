@@ -18,6 +18,7 @@
   };
 
   var TABLET_WIDTH = 750;
+  var ESC_KEYCODE = 27;
   var menu = document.querySelector('.menu');
   var menuButton = document.querySelector('.header__button');
   var textButton = menuButton.querySelector('span');
@@ -42,19 +43,30 @@
     }
   };
 
-  var menuClickHandler = function () {
-    menu.classList.remove('menu--opened');
-    setStateOpenMenu();
+  var documentClickHandler = function (evt) {
+    if (evt.target !== menuButton) {
+      menu.classList.remove('menu--opened');
+      setStateOpenMenu();
+    }
+  };
+
+  var documentEscKeyHandler = function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      menu.classList.remove('menu--opened');
+      setStateOpenMenu();
+    }
   };
 
   menuButton.addEventListener('click', function () {
     menu.classList.toggle('menu--opened');
     if (menu.classList.contains('menu--opened')) {
       setStateCloseMenu();
-      menu.addEventListener('click', menuClickHandler);
+      document.addEventListener('click', documentClickHandler);
+      document.addEventListener('keydown', documentEscKeyHandler);
     } else {
       setStateOpenMenu();
-      menu.removeEventListener('click', menuClickHandler);
+      document.removeEventListener('click', documentClickHandler);
+      document.removeEventListener('keydown', documentEscKeyHandler);
     }
   });
 })();
