@@ -8,6 +8,11 @@
   height: 139px;
   margin: 0 auto;
   margin-bottom: 80px;
+
+  &--questions {
+    width: 290px;
+    height: 172px;
+  }
 }
 
 .video__link {
@@ -16,11 +21,21 @@
   width: 214px;
   height: 139px;
   margin: 0 auto;
+
+  &--questions {
+    width: 291px;
+    height: 172px;
+  }
 }
 
 .video__poster {
   opacity: 0.7;
   box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.48);
+
+  &--questions {
+    opacity: 1;
+    box-shadow: none;
+  }
 }
 
 .video__button {
@@ -121,6 +136,11 @@
   .video__link {
     width: 516px;
     height: 259px;
+
+    &--questions {
+      width: 718px;
+      height: 361px;
+    }
   }
 
   .video__button {
@@ -128,7 +148,7 @@
     padding-left: 52px;
     width: auto;
 
-    & span {
+    &--pantheon span {
       display: block;
       margin-left: 10px;
       font-size: 16px;
@@ -165,6 +185,11 @@
   .video__link {
     width: 582px;
     height: 292px;
+
+    &--questions {
+      width: 1139px;
+      height: 572px;
+    }
   }
 
   .video__text {
