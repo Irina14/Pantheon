@@ -12,6 +12,7 @@
   &--questions {
     width: 290px;
     height: 172px;
+    margin-bottom: 40px;
   }
 }
 
@@ -130,6 +131,10 @@
 @media (min-width: $tablet-width) {
   .video__wrapper {
     margin-bottom: 58px;
+
+    &--questions {
+      margin-bottom: 54px;
+    }
   }
 
   .video__wrapper,
@@ -179,6 +184,10 @@
 @media (min-width: $desktop-width) {
   .video__wrapper {
     margin-bottom: 25px;
+
+    &--questions {
+      margin-bottom: 65px;
+    }
   }
 
   .video__wrapper,

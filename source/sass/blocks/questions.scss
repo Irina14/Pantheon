@@ -1,0 +1,126 @@
+.questions {
+  background: #191b45 url("../img/bg-questions-mobile.jpg") no-repeat;
+  background-size: 100% 100%;
+}
+
+.questions__wrapper {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.questions__title {
+  @include title(36px, 40px, $white);
+  width: 83%;
+  margin-bottom: 50px;
+}
+
+.questions__list {
+  @include reset-list;
+  @include text(16px, 24px, $white);
+}
+
+.questions__item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.questions__subtitle {
+  display: none;
+}
+
+.questions__button {
+  @include reset-button;
+  @include text(16px, 24px, $lilac);
+  position: relative;
+  width: 100%;
+  font-weight: 700;
+  text-align: start;
+  padding-right: 23px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: calc(50% - 7px);
+    width: 11px;
+    height: 11px;
+    border: 2px solid $lilac;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-135deg);
+  }
+
+  &--active {
+    margin-bottom: 35px;
+    color: $white;
+
+    &::after {
+      top: calc(50% - 3px);
+      border-color: $white;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.questions__desc {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.questions__text {
+  margin: 0 0 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .questions {
+    background: #191b45 url("../img/bg-questions-tablet.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .questions__wrapper {
+    padding-top: 67px;
+    padding-bottom: 90px;
+  }
+
+  .questions__title {
+    @include title(48px, 52px, $white);
+    width: auto;
+    margin-bottom: 47px;
+  }
+
+  .questions__subtitle {
+    @include title(24px, 24px, $white);
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .questions__button {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questions {
+    background: #191b45 url("../img/bg-questions-desktop.jpg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .questions__wrapper {
+    padding-top: 100px;
+    padding-bottom: 140px;
+  }
+
+  .questions__title {
+    @include title(56px, 60px, $white);
+    margin-bottom: 60px;
+  }
+
+  .questions__subtitle {
+    margin-bottom: 35px;
+  }
+}

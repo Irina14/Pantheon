@@ -11,7 +11,7 @@
   list-style: none;
 }
 
-@mixin title ($font-size, $line-height, $color) {
+@mixin title($font-size, $line-height, $color) {
   margin: 0;
   font-size: $font-size;
   line-height: $line-height;
