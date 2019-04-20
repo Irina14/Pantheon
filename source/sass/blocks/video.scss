@@ -62,6 +62,7 @@
     height: 52px;
     background-color: #e12457;
     border-radius: 50%;
+    transition: all 0.5s linear;
   }
 
   &::after {
@@ -75,6 +76,7 @@
     border-top-color: transparent;
     border-bottom-color: transparent;
     border-right-width: 0;
+    transition: all 0.5s linear;
   }
 
   &:hover::before,
@@ -110,6 +112,7 @@
   margin-bottom: 25px;
   background-color: rgba(#b11d5e, 0.5);
   border-radius: 50%;
+  transition: all 0.5s linear;
 
   &::before {
     content: "";
@@ -133,7 +136,7 @@
     margin-bottom: 58px;
 
     &--questions {
-      margin-bottom: 54px;
+      margin-bottom: 60px;
     }
   }
 
@@ -186,7 +189,7 @@
     margin-bottom: 25px;
 
     &--questions {
-      margin-bottom: 65px;
+      margin-bottom: 70px;
     }
   }
 
