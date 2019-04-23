@@ -1,0 +1,267 @@
+.organization {
+  background: url("../img/pattern.png");
+}
+
+.organization__wrapper {
+  @include container;
+  padding-top: 52px;
+  padding-bottom: 70px;
+}
+
+.organization__title {
+  @include title(36px, 40px, $maroon);
+  margin-bottom: 40px;
+}
+
+.organization__list {
+  @include reset-list;
+  padding-left: 28px;
+}
+
+.organization__item {
+  position: relative;
+  margin-bottom: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -28px;
+    width: 16px;
+    height: 16px;
+    border: 3px solid $maroon;
+    border-radius: 50%;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: -21px;
+    width: 3px;
+    height: 38px;
+    background-color: $maroon;
+  }
+
+  &--active {
+    &::before {
+      background-color: $maroon;
+    }
+
+    &:not(:last-child)::after {
+      height: 100%;
+    }
+  }
+}
+
+.organization__button {
+  @include reset-button;
+  position: relative;
+  width: 30px;
+  height: 31px;
+  margin-bottom: 0;
+
+  & span {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--residence {
+    &::before {
+      width: 30px;
+      height: 23px;
+      background: url("../img/teacup.png") no-repeat;
+    }
+  }
+
+  &--work {
+    &::before {
+      width: 26px;
+      height: 19px;
+      background: url("../img/helmet.png") no-repeat;
+    }
+  }
+
+  &--research {
+    &::before {
+      width: 22px;
+      height: 31px;
+      background: url("../img/microscope.png") no-repeat;
+    }
+  }
+
+  &--shooting {
+    &::before {
+      width: 25px;
+      height: 21px;
+      background: url("../img/photo.png") no-repeat;
+    }
+  }
+
+  &--flora {
+    &::before {
+      width: 26px;
+      height: 27px;
+      background: url("../img/leaves.png") no-repeat;
+    }
+  }
+
+  &--active {
+    width: auto;
+    padding-left: 30px;
+    margin-bottom: 25px;
+
+    &::before {
+      left: 0;
+      transform: translate(0, -50%);
+    }
+
+    & span {
+      @include text(20px, 24px, $maroon);
+      display: block;
+      padding-left: 15px;
+      font-weight: 700;
+    }
+  }
+}
+
+.organization__desc {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.organization__image {
+  margin-bottom: 28px;
+}
+
+.organization__subtitle {
+  @include title(24px, 24px, $dark);
+  margin-bottom: 15px;
+}
+
+.organization__text {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.organization__link {
+  @include text(16px, 16px, $white);
+  display: inline-block;
+  min-width: 160px;
+  height: 46px;
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  text-align: center;
+  background-color: $maroon;
+  border-radius: 25px;
+  transition: all 0.3s linear;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($maroon, 0.8);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .organization {
+    min-height: 890px;
+  }
+
+  .organization__wrapper {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  .organization__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .organization__item {
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      width: 118px;
+    }
+
+    &::before {
+      top: -30px;
+      left: 5px;
+    }
+
+    &:not(:last-child)::after {
+      top: -24px;
+      left: 18px;
+      width: 105px;
+      height: 3px;
+    }
+
+    &--active {
+      &:not(:last-child) {
+        width: 320px;
+      }
+
+      &:not(:last-child)::after {
+        width: 310px;
+        height: 3px;
+      }
+    }
+  }
+
+  .organization__desc {
+    &--active {
+      position: absolute;
+      width: 720px;
+    }
+  }
+
+  .organization__title {
+    @include title(48px, 52px, $maroon);
+    margin-bottom: 80px;
+  }
+
+  .organization__image {
+    margin-bottom: 32px;
+  }
+
+  .organization__link {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .organization {
+    min-height: 1050px;
+  }
+
+  .organization__title {
+    @include title(60px, 64px, $maroon);
+    margin-bottom: 50px;
+  }
+
+  .organization__wrapper {
+    padding-top: 100px;
+  }
+
+  .organization__image {
+    margin-bottom: 38px;
+  }
+
+  .organization__text {
+    margin-bottom: 40px;
+  }
+}
