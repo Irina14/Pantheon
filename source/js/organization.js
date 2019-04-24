@@ -21,6 +21,9 @@
       if (window.innerWidth >= 750 && window.innerWidth < 1170) {
         organizationDescs[index].style.left = index * (-118) + "px";
       }
+      if (window.innerWidth >= 1170) {
+        organizationDescs[index].style.top = index * (-114) + "px";
+      }
     }
   }
 

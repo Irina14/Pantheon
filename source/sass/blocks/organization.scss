@@ -30,6 +30,7 @@
     width: 16px;
     height: 16px;
     border: 3px solid $maroon;
+    background-color: $white;
     border-radius: 50%;
   }
 
@@ -39,7 +40,7 @@
     top: 24px;
     left: -21px;
     width: 3px;
-    height: 38px;
+    height: 40px;
     background-color: $maroon;
   }
 
@@ -220,6 +221,10 @@
         height: 3px;
       }
     }
+
+    &:last-child .organization__desc {
+      left: -472px;
+    }
   }
 
   .organization__desc {
@@ -257,11 +262,93 @@
     padding-top: 100px;
   }
 
+  .organization__list {
+    display: block;
+    width: auto;
+    margin: 0;
+    padding-left: 43px;
+  }
+
   .organization__image {
     margin-bottom: 38px;
   }
 
   .organization__text {
     margin-bottom: 40px;
+  }
+
+  .organization__item {
+    margin-bottom: 76px;
+
+    &::before {
+      top: 9px;
+      left: -28px;
+    }
+
+    &:not(:last-child)::after {
+      top: 24px;
+      left: -21px;
+      width: 3px;
+      height: 100px;
+    }
+
+    &--active {
+      margin-bottom: 258px;
+
+      &:not(:last-child)::after {
+        height: 300px;
+      }
+    }
+
+    &:last-child .organization__desc {
+      left: 110px;
+    }
+  }
+
+  .organization__desc {
+    &--active {
+      left: 110px;
+      top: 0;
+      width: 975px;
+    }
+  }
+
+  .organization__button {
+    &--active {
+      &::before {
+        transform: rotate(-90deg) translateX(12px);
+      }
+
+      & span {
+        transform: rotate(180deg);
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .organization__button--active.organization__button {
+    &--residence {
+      transform: rotate(90deg) translateX(77px) translateY(77px);
+    }
+
+    &--work {
+      transform: rotate(90deg) translateX(52px) translateY(52px);
+    }
+
+    &--research {
+      transform: rotate(90deg) translateX(82px) translateY(87px);
+
+      &::before {
+        transform: rotate(-90deg) translateX(15px) translateY(10px);
+      }
+    }
+
+    &--shooting {
+      transform: rotate(90deg) translateX(54px) translateY(52px);
+    }
+
+    &--flora {
+      transform: rotate(90deg) translateX(50px) translateY(45px);
+    }
   }
 }
