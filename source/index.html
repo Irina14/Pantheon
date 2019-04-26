@@ -388,8 +388,8 @@
     </section>
 
     <section class="cost">
+      <h2 class="cost__title">Деньги приготовил. Когда вылетаем?</h2>
       <div class="cost__wrapper">
-        <h2 class="cost__title">Деньги приготовил. Когда вылетаем?</h2>
         <div class="cost__desc">
           <p class="cost__text">
             Первый «частный» полёт на Марс осуществит в 2018 году в беспилотном варианте корабль Dragon V2 с помощью
@@ -407,10 +407,14 @@
         <div class="cost__form form">
           <h3 class="form__title">Будь в курсе новостей</h3>
           <form action="#" method="post">
-            <label for="nickname">Имя</label>
-            <input class="form__input" type="text" id="nickname">
-            <label for="email">E-mail</label>
-            <input class="form__input" type="email" id="email">
+            <div class="form__field form__field--name">
+              <label class="form__label" for="nickname">Имя</label>
+              <input class="form__input form__input--name" type="text" id="nickname">
+            </div>
+            <div class="form__field form__field--email">
+              <label class="form__label" for="mail">E-mail</label>
+              <input class="form__input" type="email" id="mail">
+            </div>
             <button class="form__button" type="submit">Подписаться</button>
           </form>
         </div>

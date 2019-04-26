@@ -1,21 +1,21 @@
 .cost {
-  background-color: $purple;
+  padding-top: 48px;
+  background: $purple;
   font-size: 16px;
   color: $white;
-}
-
-.cost__wrapper {
-  @include container;
-  padding-top: 48px;
 }
 
 .cost__title {
   @include title(36px, 40px, $white);
   margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cost__desc {
   margin-bottom: 47px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .cost__text {
@@ -45,8 +45,12 @@
   }
 }
 
+.cost__form {
+  margin: 0 auto;
+}
+
 @media (min-width: $tablet-width) {
-  .cost__wrapper {
+  .cost {
     padding-top: 80px;
   }
 
@@ -54,15 +58,50 @@
     @include title(48px, 52px, $white);
     margin-bottom: 60px;
   }
+
+  .cost__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    margin: 0 auto 38px;
+  }
+
+  .cost__desc {
+    width: 345px;
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cost__form {
+    order: -1;
+    margin: 0 30px 0 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
-  .cost__wrapper {
+  .cost {
     padding-top: 116px;
   }
 
   .cost__title {
     @include title(60px, 64px, $white);
+    @include container;
     margin-bottom: 70px;
+  }
+
+  .cost__wrapper {
+    @include container;
+    justify-content: space-between;
+    width: auto;
+    margin-bottom: 67px;
+  }
+
+  .cost__desc {
+    width: 682px;
+  }
+
+  .cost__form {
+    margin: 0;
   }
 }

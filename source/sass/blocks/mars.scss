@@ -150,23 +150,8 @@
 }
 
 .mars__button {
-  @include text(18px, 24px, #c2529a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include button;
   width: 290px;
-  height: 57px;
-  font-weight: 700;
-  background-color: $white;
-  border-radius: 28px;
-  box-shadow: 2px 2px 27px 0 #ffffff;
-  transition: all 0.5s linear;
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background-color: #c2529a;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -284,7 +269,6 @@
   .mars__button {
     margin-left: auto;
     width: 200px;
-    height: 57px;
   }
 }
 
